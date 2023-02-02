@@ -15,4 +15,5 @@
   <%= link_to "Back to lists", lists_path, class: "text-decoration-none" %>
   <br>
 
+<%= cl_image_tag @picture.photo.key, height: 300, width: 400, crop: :fill %>
 </div>
