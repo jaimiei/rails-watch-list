@@ -7,7 +7,3 @@ Rails.application.routes.draw do
   resources :bookmarks, only: :destroy
   resources :reviews, only: :destroy
 end
-
-# resources :lists do
-#   resources :bookmarks, only: %i[new create destroy]
-# end

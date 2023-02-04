@@ -1,20 +1,19 @@
-<div class="cover mb-4 d-flex align-items-center justify-content-center">
-<div class="container">
-  <h1 class="text-center">My Lists</h1>
-    <div>
-      <ul class="list-unstyled">
+<div class="position-relative">
+  <div class="card-category card-large" style="background-image: url('<%= image_path "tommy-wiseau.jpeg" %>')">
+  My Lists
+  </div>
+</div>
+<br>
+<div class="row my-2">
+    <div class="cards">
+      <ul>
+        <div>
         <% @lists.each do |list| %>
-          <li><%= link_to list.name, list_path(list), class: "text-decoration-none" %></li>
+          <li class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/breakfast.jpg)">
+          <%= link_to list.name, list_path(list), class: "text-decoration-none" %></li>
         <% end %>
       </ul>
     </div>
-<%= link_to "Create a movie list", new_list_path, class: "btn btn-flat" %>
 </div>
-
-
-
-<%# <%= simple_form_for(picture) do |f| %>
-  <!-- [...] -->
-  <%# <%= f.input :photo, as: :file %>
-  <!-- [...] -->
-<%# <% end %>
+<br>
+<%= link_to "Create a movie list", new_list_path, class: "btn btn-success" %>
